@@ -2839,8 +2839,1664 @@ nav a img{
 }
 </style>
 
+
+<style>
+/* =========================================================
+   FINAL MOBILE RESPONSIVE OVERRIDES
+   Desktop styling is untouched. These rules apply only to
+   tablet/phone widths and prevent horizontal overflow.
+   ========================================================= */
+
+html, body{
+  max-width:100%;
+}
+
+@media (max-width:880px){
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+
+  *, *::before, *::after{
+    box-sizing:border-box;
+  }
+
+  img, svg, video{
+    max-width:100%;
+  }
+
+  .wrap{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  /* Navbar */
+  header,
+  .nav{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .nav{
+    height:68px !important;
+    min-height:68px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .navlinks,
+  .btn-header{
+    display:none !important;
+  }
+
+  .menu-btn{
+    display:flex !important;
+    flex:0 0 auto !important;
+  }
+
+  .exact-navbar-logo{
+    height:43px !important;
+    width:auto !important;
+    max-width:62vw !important;
+    transform:none !important;
+    top:0 !important;
+  }
+
+  .brand,
+  .brand a{
+    min-width:0 !important;
+    max-width:calc(100vw - 92px) !important;
+  }
+
+  .mobile-menu{
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    max-width:100vw !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  /* Hero */
+  .hero{
+    padding-top:38px !important;
+    padding-bottom:52px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:30px !important;
+    width:100% !important;
+  }
+
+  .hero-grid > *{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+
+  .hero h1{
+    font-size:clamp(31px,8.2vw,40px) !important;
+    line-height:1.08 !important;
+    max-width:100% !important;
+    margin-top:16px !important;
+    margin-bottom:18px !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+  }
+
+  .hero p.lead{
+    width:100% !important;
+    max-width:100% !important;
+    font-size:16px !important;
+    line-height:1.7 !important;
+  }
+
+  .hero-ctas{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .hero-ctas .btn{
+    width:100% !important;
+    max-width:100% !important;
+    justify-content:center !important;
+    white-space:normal !important;
+    text-align:center !important;
+  }
+
+  .hero-visual{
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
+  }
+
+  .hero-seal-wrap,
+  .hero-seal-wrap .seal{
+    max-width:100% !important;
+  }
+
+  .hero-seal-wrap .seal{
+    --seal-size:170px !important;
+  }
+
+  /* Stats: stack cleanly on phone/tablet */
+  .hero .stat-row,
+  .stat-row{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-top:34px !important;
+    border-top:1px solid var(--line) !important;
+  }
+
+  .hero .stat-row::before,
+  .stat-row::before{
+    display:none !important;
+  }
+
+  .hero .stat-row > .stat,
+  .stat-row > .stat{
+    width:100% !important;
+    min-width:0 !important;
+    padding:18px 4px !important;
+    border-right:none !important;
+    border-bottom:1px solid var(--line) !important;
+    margin:0 !important;
+  }
+
+  .hero .stat-row > .stat:last-child,
+  .stat-row > .stat:last-child{
+    border-bottom:none !important;
+  }
+
+  .hero .stat-row > .stat > .num,
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .num,
+  .stat-row > .stat > .label{
+    width:100% !important;
+    max-width:100% !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .label{
+    font-size:11px !important;
+    line-height:1.45 !important;
+  }
+
+  /* Preserve the approved centering of 2 and JO */
+  .hero .stat-row > .stat-approval > .num,
+  .hero .stat-row > .stat-market > .num{
+    text-align:center !important;
+  }
+
+  /* General sections */
+  section{
+    width:100% !important;
+    max-width:100% !important;
+    padding-top:52px !important;
+    padding-bottom:52px !important;
+    overflow:hidden !important;
+  }
+
+  .section-head{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:14px !important;
+    margin-bottom:34px !important;
+  }
+
+  .section-head h2,
+  #contact > .contact-grid > div:first-child > h2,
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:clamp(29px,7.8vw,36px) !important;
+    line-height:1.1 !important;
+    max-width:100% !important;
+    overflow-wrap:normal !important;
+  }
+
+  /* About */
+  .about-block{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:28px !important;
+    width:100% !important;
+  }
+
+  .about-figure,
+  .about-copy{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+
+  .about-copy p{
+    font-size:15.5px !important;
+    line-height:1.75 !important;
+  }
+
+  .badge-pill{
+    max-width:100% !important;
+    white-space:normal !important;
+  }
+
+  /* Services overview on Home */
+  .services-overview{
+    width:100% !important;
+    margin-bottom:38px !important;
+  }
+
+  .services-overview-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:16px !important;
+    width:100% !important;
+  }
+
+  .service-overview-card{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    grid-template-columns:72px minmax(0,1fr) 18px !important;
+    gap:14px !important;
+    padding:20px 18px !important;
+  }
+
+  .service-overview-icon{
+    width:68px !important;
+    height:68px !important;
+  }
+
+  .service-overview-copy{
+    min-width:0 !important;
+  }
+
+  .service-overview-copy h3{
+    font-size:20px !important;
+    overflow-wrap:normal !important;
+  }
+
+  /* Standalone Services page */
+  .service-card{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    padding:22px 18px !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    overflow:hidden !important;
+  }
+
+  .service-top{
+    width:100% !important;
+    min-width:0 !important;
+    gap:14px !important;
+  }
+
+  .service-top h2,
+  .service-card h2,
+  .service-card h3{
+    max-width:100% !important;
+    overflow-wrap:normal !important;
+  }
+
+  .service-body{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:26px !important;
+    width:100% !important;
+  }
+
+  .service-body > *,
+  .service-aside{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+
+  .service-body p{
+    font-size:15.5px !important;
+    line-height:1.75 !important;
+    overflow-wrap:anywhere !important;
+  }
+
+  .service-aside{
+    border-left:none !important;
+    padding-left:0 !important;
+    border-top:1px solid var(--line) !important;
+    padding-top:22px !important;
+  }
+
+  .telecom-visual,
+  .safety-visual{
+    width:min(100%,320px) !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  .telecom-visual svg,
+  .safety-visual svg{
+    width:100% !important;
+    height:auto !important;
+  }
+
+  /* Process */
+  .process-row,
+  .process-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    width:100% !important;
+  }
+
+  .process-cell{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    padding:22px 18px !important;
+  }
+
+  /* Contact */
+  #contact .contact-grid,
+  .contact-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:36px !important;
+    width:100% !important;
+  }
+
+  #contact .contact-grid > *{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+
+  #contact > .contact-grid > div:first-child > .contact-link,
+  .contact-link{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .contact-link{
+    font-size:15px !important;
+    overflow-wrap:anywhere !important;
+    word-break:break-word !important;
+  }
+
+  #contact .contact-card,
+  .contact-card{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+    justify-self:stretch !important;
+    padding:26px 20px !important;
+  }
+
+  .contact-card > .seal{
+    width:104px !important;
+    height:104px !important;
+  }
+
+  .final-consult-question-png,
+  .final-consult-question-icon,
+  .approved-consult-icon{
+    width:104px !important;
+    height:104px !important;
+    max-width:100% !important;
+  }
+
+  /* Footer */
+  footer,
+  .footer-bottom,
+  .bottom-bar,
+  .footer-bar{
+    max-width:100% !important;
+  }
+
+  .footer-bottom,
+  .bottom-bar,
+  .footer-bar{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:10px !important;
+    text-align:center !important;
+  }
+
+  /* Floating controls */
+  .floating-action{
+    width:50px !important;
+    height:50px !important;
+    bottom:14px !important;
+  }
+
+  .whatsapp-float{
+    right:12px !important;
+  }
+
+  .back-to-top{
+    left:12px !important;
+  }
+}
+
+@media (max-width:480px){
+  .wrap{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .nav{
+    height:64px !important;
+    min-height:64px !important;
+  }
+
+  .exact-navbar-logo{
+    height:39px !important;
+    max-width:66vw !important;
+  }
+
+  .mobile-menu{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .hero{
+    padding-top:30px !important;
+    padding-bottom:44px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(29px,8.7vw,35px) !important;
+  }
+
+  .hero p.lead{
+    font-size:15px !important;
+  }
+
+  .hero-seal-wrap .seal{
+    --seal-size:150px !important;
+  }
+
+  .section-head h2,
+  #contact > .contact-grid > div:first-child > h2,
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:clamp(27px,8vw,33px) !important;
+  }
+
+  .service-overview-card{
+    grid-template-columns:58px minmax(0,1fr) 16px !important;
+    gap:12px !important;
+    padding:18px 14px !important;
+  }
+
+  .service-overview-icon{
+    width:56px !important;
+    height:56px !important;
+  }
+
+  .service-overview-copy h3{
+    font-size:18px !important;
+  }
+
+  .service-card{
+    padding:20px 16px !important;
+  }
+
+  .contact-card{
+    padding:22px 16px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===============================
+   MOBILE REFINEMENTS - V2
+   Phone only. Desktop unchanged.
+   =============================== */
+
+@media (max-width:600px){
+
+  /* General mobile typography */
+  body{
+    font-size:15px !important;
+    line-height:1.6 !important;
+  }
+
+  .wrap{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  /* Hero: smaller and no horizontal overflow */
+  .hero{
+    padding-top:24px !important;
+    padding-bottom:38px !important;
+  }
+
+  .hero-grid{
+    gap:18px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(27px,7.3vw,32px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-0.03em !important;
+    word-spacing:0.04em !important;
+    max-width:100% !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+  }
+
+  .hero p.lead{
+    font-size:14.5px !important;
+    line-height:1.65 !important;
+    max-width:100% !important;
+  }
+
+  .hero-ctas{
+    gap:10px !important;
+  }
+
+  .hero-ctas .btn{
+    min-height:52px !important;
+    padding:14px 12px !important;
+    font-size:14px !important;
+    letter-spacing:.08em !important;
+  }
+
+  .hero-seal-wrap{
+    order:-1 !important;
+    margin-bottom:8px !important;
+  }
+
+  .hero-seal-wrap .seal{
+    --seal-size:142px !important;
+  }
+
+  /* Stats smaller on phone */
+  .hero .stat-row,
+  .stat-row{
+    margin-top:24px !important;
+  }
+
+  .hero .stat-row > .stat,
+  .stat-row > .stat{
+    padding:16px 6px !important;
+  }
+
+  .hero .stat-row > .stat > .num,
+  .stat-row > .stat > .num{
+    font-size:24px !important;
+    line-height:1.1 !important;
+  }
+
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .label{
+    font-size:10px !important;
+    line-height:1.35 !important;
+    letter-spacing:.05em !important;
+  }
+
+  /* Section labels and headings smaller */
+  .section-eyebrow,
+  .eyebrow{
+    font-size:13px !important;
+    letter-spacing:.14em !important;
+  }
+
+  .section-head h2,
+  #about .section-head h2,
+  #services .section-head h2,
+  #process .section-head h2,
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:clamp(25px,6.9vw,30px) !important;
+    line-height:1.12 !important;
+    letter-spacing:-0.025em !important;
+    word-spacing:0.03em !important;
+  }
+
+  /* About / service / process text */
+  .about-copy p,
+  .service-body p,
+  .process-cell p,
+  #contact .contact-copy p,
+  #contact .contact-info p{
+    font-size:14.5px !important;
+    line-height:1.7 !important;
+  }
+
+  .service-overview-copy h3,
+  .service-card h2,
+  .service-card h3{
+    font-size:18px !important;
+    line-height:1.25 !important;
+  }
+
+  .service-card,
+  .service-overview-card,
+  .process-cell{
+    padding:18px 14px !important;
+  }
+
+  /* Contact section smaller on phone */
+  #contact{
+    padding-top:40px !important;
+    padding-bottom:34px !important;
+  }
+
+  #contact .contact-grid,
+  .contact-grid{
+    gap:24px !important;
+  }
+
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:clamp(24px,6.5vw,29px) !important;
+  }
+
+  #contact .contact-copy p,
+  #contact .contact-info p{
+    font-size:14px !important;
+    line-height:1.65 !important;
+  }
+
+  .contact-link{
+    font-size:14px !important;
+    line-height:1.45 !important;
+  }
+
+  .contact-card{
+    padding:20px 14px !important;
+  }
+
+  .contact-card h3{
+    font-size:22px !important;
+    line-height:1.2 !important;
+  }
+
+  .contact-card p{
+    font-size:14px !important;
+    line-height:1.55 !important;
+  }
+
+  .contact-card .btn{
+    min-height:50px !important;
+    padding:13px 10px !important;
+    font-size:13px !important;
+    letter-spacing:.07em !important;
+  }
+
+  .contact-card > .seal,
+  .final-consult-question-png,
+  .final-consult-question-icon,
+  .approved-consult-icon{
+    width:88px !important;
+    height:88px !important;
+  }
+
+  /* Footer: prevent lines/words from overlapping */
+  footer{
+    padding-bottom:78px !important;
+  }
+
+  .footer-bottom,
+  .bottom-bar,
+  .footer-bar{
+    width:100% !important;
+    max-width:100% !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    justify-items:center !important;
+    align-items:center !important;
+    gap:5px !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+    text-align:center !important;
+    white-space:normal !important;
+    overflow:visible !important;
+  }
+
+  .footer-bottom *,
+  .bottom-bar *,
+  .footer-bar *{
+    max-width:100% !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    text-align:center !important;
+    line-height:1.45 !important;
+  }
+
+  .footer-bottom,
+  .footer-bottom a,
+  .bottom-bar,
+  .bottom-bar a,
+  .footer-bar,
+  .footer-bar a{
+    font-size:11px !important;
+    letter-spacing:.04em !important;
+  }
+
+  /* Floating buttons slightly smaller */
+  .floating-action{
+    width:46px !important;
+    height:46px !important;
+    bottom:12px !important;
+  }
+
+  .whatsapp-float{
+    right:10px !important;
+  }
+
+  .back-to-top{
+    left:10px !important;
+  }
+}
+
+@media (max-width:390px){
+  .hero h1{
+    font-size:26px !important;
+  }
+
+  .section-head h2,
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:24px !important;
+  }
+
+  .hero p.lead,
+  .about-copy p,
+  .service-body p,
+  .process-cell p,
+  #contact .contact-copy p,
+  #contact .contact-info p{
+    font-size:14px !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: align all three hero statistics to the left */
+@media (max-width:600px){
+  .hero .stat-row > .stat,
+  .stat-row > .stat{
+    text-align:left !important;
+  }
+
+  .hero .stat-row > .stat > .num,
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .num,
+  .stat-row > .stat > .label,
+  .hero .stat-row > .stat-approval > .num,
+  .hero .stat-row > .stat-market > .num{
+    text-align:left !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: clean footer layout with no overlapping text */
+@media (max-width:600px){
+  .footer-bottom,
+  .bottom-bar,
+  .footer-bar{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+    width:100% !important;
+    max-width:100% !important;
+    padding:18px 20px 84px !important;
+    text-align:center !important;
+    justify-items:center !important;
+    align-items:center !important;
+    white-space:normal !important;
+    overflow:visible !important;
+  }
+
+  .footer-bottom > *,
+  .bottom-bar > *,
+  .footer-bar > *{
+    width:auto !important;
+    max-width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    position:static !important;
+    transform:none !important;
+    text-align:center !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    line-height:1.45 !important;
+  }
+
+  .footer-bottom,
+  .footer-bottom a,
+  .bottom-bar,
+  .bottom-bar a,
+  .footer-bar,
+  .footer-bar a{
+    font-size:11px !important;
+    letter-spacing:.035em !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: justify all paragraph/body copy.
+   Headings, buttons, labels and navigation remain unchanged. */
+@media (max-width:600px){
+  p,
+  .hero p.lead,
+  .about-copy p,
+  .service-body p,
+  .process-cell p,
+  #contact .contact-copy p,
+  #contact .contact-info p,
+  .contact-card p,
+  .service-overview-copy p,
+  .service-card p{
+    text-align:justify !important;
+    text-justify:inter-word !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: slightly smaller burgundy section labels */
+@media (max-width:600px){
+  .section-eyebrow,
+  .eyebrow{
+    font-size:11.5px !important;
+    letter-spacing:.13em !important;
+  }
+
+  /* Center all three hero statistics and their labels on phone */
+  .hero .stat-row > .stat,
+  .stat-row > .stat,
+  .hero .stat-row > .stat > .num,
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .num,
+  .stat-row > .stat > .label,
+  .hero .stat-row > .stat-approval > .num,
+  .hero .stat-row > .stat-market > .num{
+    text-align:center !important;
+  }
+
+  .hero .stat-row > .stat > .num,
+  .hero .stat-row > .stat > .label,
+  .stat-row > .stat > .num,
+  .stat-row > .stat > .label{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: fix the actual footer row structure */
+@media (max-width:600px){
+  footer{
+    padding-bottom:76px !important;
+  }
+
+  footer .footer-row{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:6px !important;
+    width:100% !important;
+    max-width:100% !important;
+    padding:18px 18px 22px !important;
+    text-align:center !important;
+    white-space:normal !important;
+    overflow:visible !important;
+  }
+
+  footer .footer-row > span,
+  footer .footer-row > span a{
+    display:block !important;
+    width:auto !important;
+    max-width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    position:static !important;
+    transform:none !important;
+    text-align:center !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    line-height:1.45 !important;
+    font-size:11px !important;
+    letter-spacing:.035em !important;
+  }
+
+  footer .footer-row > span:last-child{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:3px 6px !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: justified paragraphs without exaggerated word gaps */
+@media (max-width:600px){
+  p,
+  .hero p.lead,
+  .about-copy p,
+  .service-body p,
+  .process-cell p,
+  #contact .contact-copy p,
+  #contact .contact-info p,
+  .contact-card p,
+  .service-overview-copy p,
+  .service-card p{
+    text-align:justify !important;
+    text-align-last:left !important;
+    text-justify:inter-word !important;
+    word-spacing:normal !important;
+    letter-spacing:normal !important;
+    hyphens:auto !important;
+    -webkit-hyphens:auto !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: center the Process titles */
+@media (max-width:600px){
+  .process-cell h3{
+    text-align:center !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: make the burgundy section labels smaller */
+@media (max-width:600px){
+  .section-eyebrow,
+  .eyebrow{
+    font-size:10px !important;
+    letter-spacing:.12em !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: left-align Telecom Type Approval and JSMO Safety Compliance titles */
+@media (max-width:600px){
+  .service-card h2,
+  .service-card h3,
+  .service-top h2,
+  .service-top h3{
+    text-align:left !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: specifically override the older 18px section-label rules */
+@media (max-width:600px){
+  #about .eyebrow,
+  #services .eyebrow,
+  #process .eyebrow,
+  #contact .eyebrow{
+    font-size:10px !important;
+    letter-spacing:.12em !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL VERIFIED PHONE-ONLY TITLE ALIGNMENT */
+@media (max-width:600px){
+
+  /* Process titles: Assess / Prepare / Coordinate / Approve */
+  #process .process-row .process-cell h4{
+    text-align:center !important;
+    width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  /* Services page titles */
+  #services #telecom-type-approval .service-top h3,
+  #services #jsmo-safety-compliance .service-top h3{
+    text-align:left !important;
+    width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
+
+<style>
+@media (max-width:600px){
+  /* Slightly larger section labels on phone */
+  #about .eyebrow,
+  #services .eyebrow,
+  #process .eyebrow,
+  #contact .eyebrow{
+    font-size:11.5px !important;
+    letter-spacing:.12em !important;
+  }
+
+  /* Center the actual Process numbers (01–04) and titles */
+  #process .process-cell .process-num,
+  #process .process-cell h4{
+    display:block !important;
+    width:100% !important;
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: make Request a Consultation card slightly smaller */
+@media (max-width:600px){
+  #contact .contact-card,
+  .contact-card{
+    width:92% !important;
+    max-width:440px !important;
+    justify-self:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding:18px 14px !important;
+  }
+
+  .contact-card > .seal,
+  .final-consult-question-png,
+  .final-consult-question-icon,
+  .approved-consult-icon{
+    width:80px !important;
+    height:80px !important;
+  }
+
+  .contact-card h3{
+    font-size:20px !important;
+  }
+
+  .contact-card p{
+    font-size:13.5px !important;
+  }
+
+  .contact-card .btn{
+    min-height:46px !important;
+    padding:11px 10px !important;
+    font-size:12.5px !important;
+  }
+}
+</style>
+
+
+<style>
+/* VERIFIED: Services page phone titles aligned LEFT */
+@media (max-width:600px){
+  body.services-page .service-detail h2,
+  body.services-page .service-detail h3,
+  .services-page .service-detail h2,
+  .services-page .service-detail h3,
+  #telecom-type-approval h2,
+  #telecom-type-approval h3,
+  #jsmo-safety-compliance h2,
+  #jsmo-safety-compliance h3{
+    text-align:left !important;
+    text-align-last:left !important;
+    justify-self:start !important;
+    align-self:start !important;
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: center the complete Process cards */
+@media (max-width:600px){
+  #process .process-cell,
+  #process .process-cell .process-num,
+  #process .process-cell h4,
+  #process .process-cell p{
+    text-align:center !important;
+    text-align-last:center !important;
+  }
+
+  #process .process-cell .process-num,
+  #process .process-cell h4,
+  #process .process-cell p{
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: center all Request a Consultation card text */
+@media (max-width:600px){
+  #contact .contact-card,
+  #contact .contact-card h3,
+  #contact .contact-card p{
+    text-align:center !important;
+    text-align-last:center !important;
+  }
+
+  #contact .contact-card h3,
+  #contact .contact-card p{
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: reduce empty space below the final footer line */
+@media (max-width:600px){
+  footer{
+    padding-bottom:52px !important;
+  }
+
+  footer .footer-row{
+    padding-bottom:8px !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL FIX — phone only:
+   The h3 itself was left-aligned, but its flex parent was still positioned on the right.
+   Force the entire title container to occupy the full row from the left. */
+@media (max-width:600px){
+  #telecom-type-approval .service-top,
+  #jsmo-safety-compliance .service-top{
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+    width:100% !important;
+  }
+
+  #telecom-type-approval .service-top > div,
+  #jsmo-safety-compliance .service-top > div{
+    display:block !important;
+    flex:1 1 100% !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    text-align:left !important;
+  }
+
+  #telecom-type-approval .service-top h3,
+  #jsmo-safety-compliance .service-top h3{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    text-align:left !important;
+    text-align-last:left !important;
+  }
+}
+</style>
+
+
+<style>
+@media (max-width:600px){
+  .hero h1,
+  #process .section-head h2{
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    padding-right:6px !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL MOBILE MENU FIX */
+@media (max-width:880px){
+  header{
+    z-index:100000 !important;
+  }
+
+  #menuBtn{
+    position:relative !important;
+    z-index:100002 !important;
+    pointer-events:auto !important;
+    cursor:pointer !important;
+  }
+
+  #mobileMenu{
+    display:flex !important;
+    position:relative !important;
+    z-index:100001 !important;
+    max-height:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+    transition:max-height .28s ease, opacity .2s ease, visibility .2s ease !important;
+  }
+
+  #mobileMenu.mobile-menu-active{
+    max-height:520px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    border-top:1px solid var(--line) !important;
+  }
+}
+</style>
+
+
+<style>
+/* Phone only: We are ready to serve .. same size as other main phone headings */
+@media (max-width:600px){
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:24px !important;
+    line-height:1.10 !important;
+    letter-spacing:-0.025em !important;
+  }
+
+  /* Services page: slightly reduce the actual Telecom and JSMO visual icons */
+  .telecom-visual,
+  .safety-visual{
+    transform:scale(.88) !important;
+    transform-origin:center center !important;
+  }
+}
+</style>
+
+
+<style>
+/* CLEAN SINGLE BACK-TO-TOP SYSTEM
+   On phones the button is always visible, avoiding local iPhone preview scroll-detection issues. */
+@media (max-width:600px){
+  button.floating-action.back-to-top{
+    display:flex !important;
+    position:fixed !important;
+    left:10px !important;
+    right:auto !important;
+    bottom:12px !important;
+    width:46px !important;
+    height:46px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:none !important;
+    z-index:2147483647 !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL PHONE HEADING SIZES — restore the approved consistent sizing */
+@media (max-width:600px){
+  .hero h1,
+  #about .section-head h2,
+  #services .section-head h2,
+  #process .section-head h2,
+  #contact .contact-copy h2,
+  #contact .contact-copy h3,
+  #contact .contact-info h2,
+  #contact .contact-info h3{
+    font-size:24px !important;
+    line-height:1.10 !important;
+    letter-spacing:-0.025em !important;
+  }
+
+  #process .section-head h2 .mobile-one-line{
+    display:block !important;
+    white-space:nowrap !important;
+    font-size:24px !important;
+  }
+
+  .hero h1{
+    width:calc(100% - 20px) !important;
+    max-width:calc(100% - 20px) !important;
+    margin-right:20px !important;
+    padding-right:0 !important;
+  }
+
+  /* Back-to-top: permanently fixed and visible on phone */
+  body > button.floating-action.back-to-top{
+    display:flex !important;
+    position:fixed !important;
+    left:10px !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:12px !important;
+    width:46px !important;
+    height:46px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:none !important;
+    z-index:2147483647 !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL PHONE CONTACT TITLE + FLOATING BUTTONS FIX */
+@media (max-width:600px){
+
+  /* Actual Contact heading selector */
+  #contact > .contact-grid > div:first-child > h2{
+    font-size:24px !important;
+    line-height:1.10 !important;
+    letter-spacing:-0.025em !important;
+  }
+
+  /* Both floating buttons are fixed from the beginning of <body> */
+  body > a.floating-action.whatsapp-float{
+    display:flex !important;
+    position:fixed !important;
+    right:10px !important;
+    left:auto !important;
+    bottom:12px !important;
+    width:46px !important;
+    height:46px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:none !important;
+    z-index:2147483647 !important;
+    background:#25D366 !important;
+  }
+
+  body > button.floating-action.back-to-top{
+    display:flex !important;
+    position:fixed !important;
+    left:10px !important;
+    right:auto !important;
+    bottom:12px !important;
+    width:46px !important;
+    height:46px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:none !important;
+    z-index:2147483647 !important;
+  }
+}
+</style>
+
+
+<style>
+/* WhatsApp: visible immediately when the page opens */
+a.floating-action.whatsapp-float{
+  display:flex !important;
+  position:fixed !important;
+  right:22px !important;
+  left:auto !important;
+  bottom:22px !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  transform:none !important;
+  z-index:2147483647 !important;
+  background:#25D366 !important;
+}
+@media (max-width:600px){
+  body > a.floating-action.whatsapp-float{
+    right:10px !important;
+    bottom:12px !important;
+    width:46px !important;
+    height:46px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* Back-to-top: hidden before About Us, visible from About Us downward */
+body > button.floating-action.back-to-top{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+body > button.floating-action.back-to-top.show-from-about{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+}
+</style>
+
+
+<style>
+/* FINAL MOBILE MENU NAVIGATION */
+@media (max-width:880px){
+  #menuBtn{
+    display:flex !important;
+    pointer-events:auto !important;
+    cursor:pointer !important;
+    position:relative !important;
+    z-index:100002 !important;
+  }
+
+  #mobileMenu{
+    display:flex !important;
+    flex-direction:column !important;
+    max-height:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+    transition:max-height .28s ease, opacity .2s ease !important;
+    z-index:100001 !important;
+  }
+
+  #mobileMenu.menu-open-final{
+    max-height:520px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+  }
+}
+</style>
+
+
+<style>
+/* NATIVE MOBILE MENU — no JavaScript dependency */
+.mobile-nav-native{ display:none; }
+
+@media (max-width:880px){
+  /* Disable the older JS-driven mobile controls completely. */
+  #menuBtn,
+  #mobileMenu{
+    display:none !important;
+  }
+
+  .nav-right{
+    position:relative !important;
+  }
+
+  .mobile-nav-native{
+    display:block !important;
+    position:relative !important;
+    z-index:100500 !important;
+  }
+
+  .mobile-nav-summary{
+    list-style:none !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    gap:5px !important;
+    width:38px !important;
+    height:38px !important;
+    border:1px solid var(--line) !important;
+    background:var(--white) !important;
+    cursor:pointer !important;
+    padding:0 !important;
+  }
+
+  .mobile-nav-summary::-webkit-details-marker{ display:none !important; }
+  .mobile-nav-summary::marker{ content:"" !important; }
+
+  .mobile-nav-summary span{
+    display:block !important;
+    width:16px !important;
+    height:1.4px !important;
+    background:var(--ink) !important;
+    margin:0 auto !important;
+    transition:transform .22s ease, opacity .18s ease !important;
+  }
+
+  .mobile-nav-native[open] .mobile-nav-summary span:nth-child(1){
+    transform:translateY(6.4px) rotate(45deg) !important;
+  }
+  .mobile-nav-native[open] .mobile-nav-summary span:nth-child(2){
+    opacity:0 !important;
+  }
+  .mobile-nav-native[open] .mobile-nav-summary span:nth-child(3){
+    transform:translateY(-6.4px) rotate(-45deg) !important;
+  }
+
+  .mobile-nav-panel{
+    position:absolute !important;
+    top:calc(100% + 10px) !important;
+    right:0 !important;
+    width:min(320px, calc(100vw - 28px)) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    background:var(--white) !important;
+    border:1px solid var(--line) !important;
+    box-shadow:0 12px 28px rgba(0,0,0,.10) !important;
+    overflow:hidden !important;
+    z-index:100501 !important;
+  }
+
+  .mobile-nav-panel a{
+    display:block !important;
+    padding:15px 18px !important;
+    font-size:15px !important;
+    font-weight:500 !important;
+    color:var(--charcoal) !important;
+    border-bottom:1px solid var(--line) !important;
+    text-decoration:none !important;
+  }
+
+  .mobile-nav-panel a:last-child{
+    border-bottom:none !important;
+  }
+
+  .mobile-nav-panel .btn{
+    margin:14px !important;
+    padding:13px 16px !important;
+    color:var(--white) !important;
+    background:var(--accent) !important;
+    text-align:center !important;
+    justify-content:center !important;
+  }
+
+  #about, #services, #process, #contact{
+    scroll-margin-top:84px !important;
+  }
+}
+</style>
+
+
+<style>
+/* Mobile menu CTA: smaller GET IN TOUCH */
+@media (max-width:880px){
+  .mobile-nav-panel a.btn{
+    width:auto !important;
+    align-self:flex-start !important;
+    margin:10px 14px 12px !important;
+    padding:9px 13px !important;
+    min-height:0 !important;
+    font-size:11px !important;
+    line-height:1.2 !important;
+    letter-spacing:.05em !important;
+  }
+}
+</style>
+
 </head>
 <body>
+<a class="floating-action whatsapp-float"
+   style="display:flex!important;position:fixed!important;right:10px!important;left:auto!important;bottom:12px!important;width:46px!important;height:46px!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important;z-index:2147483647!important;background:#25D366!important;border-color:#25D366!important;color:#fff!important;"
+   href="https://wa.me/962799368367"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="currentColor" d="M12 2a9.72 9.72 0 0 0-8.39 14.62L2 22l5.53-1.45A9.78 9.78 0 1 0 12 2Zm0 17.78a7.73 7.73 0 0 1-3.94-1.08l-.28-.17-3.28.86.88-3.2-.18-.29A7.78 7.78 0 1 1 12 19.78Zm4.27-5.82c-.23-.12-1.38-.68-1.59-.76-.21-.08-.37-.12-.52.12-.16.23-.6.76-.74.91-.14.16-.27.18-.51.06-.23-.12-.99-.36-1.88-1.16-.7-.62-1.16-1.38-1.3-1.62-.14-.23-.02-.36.1-.48.11-.1.24-.27.35-.41.12-.14.16-.24.24-.39.08-.16.04-.29-.02-.41-.06-.12-.52-1.26-.72-1.72-.19-.46-.38-.4-.52-.41h-.45c-.16 0-.41.06-.62.29-.21.23-.82.8-.82 1.96 0 1.15.84 2.27.96 2.42.12.16 1.65 2.52 4 3.53.56.24.99.39 1.33.5.56.18 1.07.15 1.47.09.45-.07 1.38-.57 1.58-1.11.19-.55.19-1.02.13-1.11-.05-.1-.21-.16-.44-.27Z"/>
+  </svg>
+</a>
+
+<button class="floating-action back-to-top"
+        style="display:flex!important;position:fixed!important;left:10px!important;right:auto!important;bottom:12px!important;width:46px!important;height:46px!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:none!important;z-index:2147483647!important;"
+        type="button"
+        aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</button>
+
 
 <!-- ============ HEADER ============ -->
 <header>
@@ -2860,18 +4516,19 @@ nav a img{
     </nav>
     <div class="nav-right">
       <a href="#contact" class="btn btn-header">GET IN TOUCH</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <details class="mobile-nav-native">
+      <summary class="mobile-nav-summary" aria-label="Open menu">
         <span></span><span></span><span></span>
-      </button>
+      </summary>
+      <nav class="mobile-nav-panel">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </details>
     </div>
   </div>
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="index.html#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="btn">REQUEST A CONSULTATION</a>
-  </nav>
 </header>
 
 <!-- ============ HERO ============ -->
@@ -2879,7 +4536,7 @@ nav a img{
   <div class="wrap hero-grid">
     <div>
               <div class="eyebrow hero-trc-eyebrow">TRC-Registered Service Provider</div>
-<h1>Compliance Made Clear ..<br><span style="white-space:nowrap;">Market Access Made Possible ..</span></h1>
+<h1>Compliance Made Clear ..<br><span style="white-space:nowrap;">Market Access Made Possible&nbsp;..</span></h1>
 <p class="lead">We simplify Jordan’s telecom, product safety, and conformity requirements guiding manufacturers, importers, and distributors from regulatory complexity to confident market access.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn">TALK TO A SPECIALIST</a>
@@ -3023,7 +4680,7 @@ nav a img{
     <div class="section-head">
       <div>
         <div class="eyebrow">How we work</div>
-        <h2>Simplifying regulations ..<br> Accelerating market access ..</h2>
+        <h2>Simplifying regulations ..<br><span class="mobile-one-line">Accelerating market access&nbsp;..</span></h2>
       </div>
     </div>
 
@@ -3132,31 +4789,205 @@ nav a img{
 
 
 <!-- Floating WhatsApp button -->
-<a class="floating-action whatsapp-float"
-   href="https://wa.me/962799368367"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Contact us on WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path fill="currentColor" d="M12 2a9.72 9.72 0 0 0-8.39 14.62L2 22l5.53-1.45A9.78 9.78 0 1 0 12 2Zm0 17.78a7.73 7.73 0 0 1-3.94-1.08l-.28-.17-3.28.86.88-3.2-.18-.29A7.78 7.78 0 1 1 12 19.78Zm4.27-5.82c-.23-.12-1.38-.68-1.59-.76-.21-.08-.37-.12-.52.12-.16.23-.6.76-.74.91-.14.16-.27.18-.51.06-.23-.12-.99-.36-1.88-1.16-.7-.62-1.16-1.38-1.3-1.62-.14-.23-.02-.36.1-.48.11-.1.24-.27.35-.41.12-.14.16-.24.24-.39.08-.16.04-.29-.02-.41-.06-.12-.52-1.26-.72-1.72-.19-.46-.38-.4-.52-.41h-.45c-.16 0-.41.06-.62.29-.21.23-.82.8-.82 1.96 0 1.15.84 2.27.96 2.42.12.16 1.65 2.52 4 3.53.56.24.99.39 1.33.5.56.18 1.07.15 1.47.09.45-.07 1.38-.57 1.58-1.11.19-.55.19-1.02.13-1.11-.05-.1-.21-.16-.44-.27Z"/>
-  </svg>
-</a>
 
 <!-- Back to top button -->
-<button class="floating-action back-to-top"
-        type="button"
-        aria-label="Back to top"
-        onclick="window.scrollTo({top:0, behavior:'smooth'});">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.2"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
-  </svg>
-</button>
 
 <div id="page-bottom" aria-hidden="true" style="height:1px; scroll-margin-top:0;"></div>
+
+<script>
+/* Independent final mobile navigation controller */
+(function(){
+  function initFinalMobileMenu(){
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+
+    /* Remove any previously attached click logic by replacing only the button.
+       This prevents stacked/conflicting older listeners from toggling twice. */
+    var cleanBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(cleanBtn, btn);
+    btn = cleanBtn;
+
+    function setOpen(open){
+      if(open){
+        menu.classList.add('mobile-menu-active');
+        menu.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        btn.setAttribute('aria-label','Close menu');
+      }else{
+        menu.classList.remove('mobile-menu-active');
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Open menu');
+      }
+    }
+
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(!menu.classList.contains('mobile-menu-active'));
+    });
+
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener('click', function(e){
+      if(window.innerWidth <= 880 &&
+         menu.classList.contains('mobile-menu-active') &&
+         !menu.contains(e.target) &&
+         !btn.contains(e.target)){
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 880) setOpen(false);
+    });
+
+    setOpen(false);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initFinalMobileMenu);
+  }else{
+    initFinalMobileMenu();
+  }
+})();
+</script>
+
+
+<script>
+/* FINAL MOBILE MENU CONTROLLER + ANCHOR NAVIGATION */
+(function(){
+  function initMenuFinal(){
+    var oldBtn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if(!oldBtn || !menu) return;
+
+    /* Replace button to remove older conflicting click listeners. */
+    var btn = oldBtn.cloneNode(true);
+    oldBtn.parentNode.replaceChild(btn, oldBtn);
+
+    function setOpen(open){
+      menu.classList.toggle('menu-open-final', open);
+      menu.classList.toggle('open', open);
+      menu.classList.toggle('mobile-menu-active', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(!menu.classList.contains('menu-open-final'));
+    });
+
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(e){
+        var href = link.getAttribute('href') || '';
+
+        /* Same-page section: close menu then scroll to the selected section. */
+        if(href.charAt(0) === '#'){
+          var target = document.querySelector(href);
+          if(target){
+            e.preventDefault();
+            setOpen(false);
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+            try{
+              history.replaceState(null, '', href);
+            }catch(err){}
+            return;
+          }
+        }
+
+        /* Cross-page links such as index.html#about keep normal browser navigation. */
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener('click', function(e){
+      if(menu.classList.contains('menu-open-final') &&
+         !menu.contains(e.target) && !btn.contains(e.target)){
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 880) setOpen(false);
+    });
+
+    setOpen(false);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initMenuFinal);
+  }else{
+    initMenuFinal();
+  }
+})();
+</script>
+
+
+<script>
+/* SINGLE FINAL FLOATING-CONTROLS CONTROLLER */
+(function(){
+  function initFloatingControls(){
+    var arrow = document.querySelector('body > button.floating-action.back-to-top');
+    var about = document.getElementById('about');
+
+    if(arrow){
+      function setArrowVisible(show){
+        arrow.style.setProperty('opacity', show ? '1' : '0', 'important');
+        arrow.style.setProperty('visibility', show ? 'visible' : 'hidden', 'important');
+        arrow.style.setProperty('pointer-events', show ? 'auto' : 'none', 'important');
+      }
+
+      function syncArrowFromAbout(){
+        if(!about){
+          setArrowVisible(false);
+          return;
+        }
+        var threshold = about.offsetTop;
+        var y = window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop || 0;
+        setArrowVisible(y >= threshold - 8);
+      }
+
+      arrow.onclick = function(e){
+        e.preventDefault();
+        try{
+          window.scrollTo({top:0,left:0,behavior:'smooth'});
+        }catch(err){
+          window.scrollTo(0,0);
+        }
+      };
+
+      window.addEventListener('scroll', syncArrowFromAbout, {passive:true});
+      window.addEventListener('resize', syncArrowFromAbout);
+      document.addEventListener('touchmove', syncArrowFromAbout, {passive:true});
+
+      /* IntersectionObserver gives mobile browsers a second independent trigger. */
+      if(about && 'IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(){
+          syncArrowFromAbout();
+        }, {threshold:[0,0.01,1]});
+        io.observe(about);
+      }
+
+      syncArrowFromAbout();
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initFloatingControls);
+  }else{
+    initFloatingControls();
+  }
+})();
+</script>
+
 </body>
 </html>
