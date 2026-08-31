@@ -5184,6 +5184,24 @@ body > button.floating-action.back-to-top.show-from-about{
 }
 </style>
 
+
+<style>
+/* FINAL PHONE FLOATING BUTTON SIZE */
+@media (max-width:600px){
+  body > a.floating-action.whatsapp-float,
+  body > button.floating-action.back-to-top{
+    width:50px !important;
+    height:50px !important;
+  }
+
+  body > a.floating-action.whatsapp-float svg,
+  body > button.floating-action.back-to-top svg{
+    width:24px !important;
+    height:24px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <a class="floating-action whatsapp-float"
@@ -5553,61 +5571,46 @@ body > button.floating-action.back-to-top.show-from-about{
 </script>
 
 
+
 <script>
-/* SINGLE FINAL FLOATING-CONTROLS CONTROLLER */
+/* FINAL ARROW VISIBILITY: show as soon as scrolling starts */
 (function(){
-  function initFloatingControls(){
+  function initArrowOnScroll(){
     var arrow = document.querySelector('body > button.floating-action.back-to-top');
-    var about = document.getElementById('about');
+    if(!arrow) return;
 
-    if(arrow){
-      function setArrowVisible(show){
-        arrow.style.setProperty('opacity', show ? '1' : '0', 'important');
-        arrow.style.setProperty('visibility', show ? 'visible' : 'hidden', 'important');
-        arrow.style.setProperty('pointer-events', show ? 'auto' : 'none', 'important');
-      }
-
-      function syncArrowFromAbout(){
-        if(!about){
-          setArrowVisible(false);
-          return;
-        }
-        var threshold = about.offsetTop;
-        var y = window.pageYOffset ||
-                document.documentElement.scrollTop ||
-                document.body.scrollTop || 0;
-        setArrowVisible(y >= threshold - 8);
-      }
-
-      arrow.onclick = function(e){
-        e.preventDefault();
-        try{
-          window.scrollTo({top:0,left:0,behavior:'smooth'});
-        }catch(err){
-          window.scrollTo(0,0);
-        }
-      };
-
-      window.addEventListener('scroll', syncArrowFromAbout, {passive:true});
-      window.addEventListener('resize', syncArrowFromAbout);
-      document.addEventListener('touchmove', syncArrowFromAbout, {passive:true});
-
-      /* IntersectionObserver gives mobile browsers a second independent trigger. */
-      if(about && 'IntersectionObserver' in window){
-        var io = new IntersectionObserver(function(){
-          syncArrowFromAbout();
-        }, {threshold:[0,0.01,1]});
-        io.observe(about);
-      }
-
-      syncArrowFromAbout();
+    function setVisible(show){
+      arrow.style.setProperty('opacity', show ? '1' : '0', 'important');
+      arrow.style.setProperty('visibility', show ? 'visible' : 'hidden', 'important');
+      arrow.style.setProperty('pointer-events', show ? 'auto' : 'none', 'important');
     }
+
+    function sync(){
+      var y = window.pageYOffset ||
+              document.documentElement.scrollTop ||
+              document.body.scrollTop || 0;
+      setVisible(y > 2);
+    }
+
+    arrow.onclick = function(e){
+      e.preventDefault();
+      try{
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
+      }catch(err){
+        window.scrollTo(0,0);
+      }
+    };
+
+    window.addEventListener('scroll', sync, {passive:true});
+    document.addEventListener('touchmove', sync, {passive:true});
+    window.addEventListener('resize', sync);
+    sync();
   }
 
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initFloatingControls);
+    document.addEventListener('DOMContentLoaded', initArrowOnScroll);
   }else{
-    initFloatingControls();
+    initArrowOnScroll();
   }
 })();
 </script>
