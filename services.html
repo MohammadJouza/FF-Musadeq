@@ -5202,6 +5202,34 @@ body > button.floating-action.back-to-top.show-from-about{
 }
 </style>
 
+
+<style>
+/* PHONE: WhatsApp and Back-to-top exactly equal, slightly larger */
+@media (max-width:600px){
+  body > a.floating-action.whatsapp-float,
+  body > button.floating-action.back-to-top{
+    width:54px !important;
+    height:54px !important;
+    min-width:54px !important;
+    min-height:54px !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    box-sizing:border-box !important;
+  }
+
+  body > a.floating-action.whatsapp-float svg,
+  body > button.floating-action.back-to-top svg{
+    width:27px !important;
+    height:27px !important;
+    min-width:27px !important;
+    min-height:27px !important;
+    flex:0 0 27px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <a class="floating-action whatsapp-float"
